@@ -8,7 +8,13 @@ var gameOver;
 var score=[0,0];
 p[0]=prompt("Enter player 1 :");
 p[1]=prompt("Enter player 2 :");
+document.getElementById("playername1").innerText=p[0];
+document.getElementById("playername2").innerText=p[1];
 function beginGame(){
+    document.getElementById("playername1").innerText=p[0];
+    document.getElementById("playername2").innerText=p[1];
+    document.getElementById("player1score").innerText=score[0];
+    document.getElementById("player2score").innerText=score[1];
     document.getElementById("restart").style.display = "none";
     gameOver=false;
     counter=[0,0];
@@ -31,6 +37,9 @@ function markHere(cDiv,value){
         counter[turn]+=value;
         if(isWin()){
             document.getElementById("game-message").innerText= p[turn] +" Won!!";
+            score[turn]+=1;
+            document.getElementById("player1score").innerText=score[0];
+            document.getElementById("player2score").innerText=score[1];
             audio = new Audio('../js/happy.mp3');
             window.focus();
             audio.play();

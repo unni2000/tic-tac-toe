@@ -2,6 +2,7 @@
 *{margin: 0; padding: 0; box-sizing: border-box; user-select: none;}
 body{ 
 background-image: url(../img/image.jfif);
+font-family: chiller;
 color: white;
 }
 div#game-board{ 
@@ -54,4 +55,23 @@ div[id^="row-"] div:last-child{border-right: none;}
   justify-content: center;
     align-content: center;
     width: auto;
+}
+#game{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    font-size: 46px;
+}
+
+#player1{
+    padding:5px;
+    padding-right: 200px;
+}
+#player2{
+    padding: 5px;
+}
+#score{
+    width: 100%;
+    text-align: center;
+    font-size: 56px;
 }
